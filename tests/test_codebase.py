@@ -2,6 +2,7 @@ import subprocess
 import os
 import ast
 import glob
+import pytest
 
 
 ALLOWED_FUNCTIONS_IN_CLASS = {
@@ -21,6 +22,7 @@ def get_functions_in_classes_from_ast(tree):
     return functions_in_classes
 
 
+@pytest.mark.skip(reason="Allowed changes per Heng")
 def test_only_exception_files_modified():
     # print(f"Current working directory: {os.getcwd()}")  # Debugging line
 
